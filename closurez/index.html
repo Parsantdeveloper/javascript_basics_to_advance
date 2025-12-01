@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font size changer </title>
+</head>
+<style>
+    body{
+        flex:auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;;
+        height: 100%;
+    }
+    h1{
+    color:green;
+    text-align: center;
+    }
+    textarea{
+        width: 700px ;
+        height: 300px;
+        padding: 100px 200px 300px ;
+
+    }
+</style>
+<body>
+    <h1 >font size changer </h1>
+     <select onchange="fontChange()" name="fonts" id="font">
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+     </select>
+<br>
+<br> 
+<br> 
+<br> 
+
+     <textarea name="" id="cont"></textarea>
+</body>
+<script>
+    function fontChange(){
+    console.log("function called successfully()")
+    console.log(document.getElementById("font").value);
+    const fontVal =document.getElementById("font").value;
+    document.getElementById("cont").style.fontSize=`${fontVal}px`;   
+    }
+</script>
+</html>

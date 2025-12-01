@@ -1,0 +1,1 @@
+ const demo=greet("niraj")
